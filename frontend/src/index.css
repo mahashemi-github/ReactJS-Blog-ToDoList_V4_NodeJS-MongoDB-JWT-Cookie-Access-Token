@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --primary: #bc4123;
+  --secondary: rgb(60, 100, 100);
+  --tertiary: rgb(255, 237, 180);
+}
+ 
+body {
+  margin: 0;
+  padding: 30px;
+  font-family: "Poppins";
+  background: var(--secondary);
+  width:inherit;
+}
+
+* {
+  color: #fff;
+  margin: 0;
+}
+
+p {
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+button {
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: white;
+  border: 2px solid white;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+button:hover{
+  border-color: var(--primary);
+}
+
+button:active {
+  background: var(--primary);
+}
+
+/* navbar */
+header nav {
+  display: flex;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header nav h1 {
+  margin-right: auto;
+  font-size: 30px;
+  background-color: #f3ec78;
+  /* background-image: linear-gradient(45deg, #f3ec78, #af4261); */
+  background-image: linear-gradient(45deg, #f3ec78, #af4261);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+
+header nav a {
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+header nav a:hover{
+  border-color: var(--primary);
+}
+
+header nav a.active {
+  background: var(--primary);
+}
+
+/* page content - Outlet component in RootLAyout*/
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+/* help layout */
+.help-layout nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+}
+
+.help-layout nav a{
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.help-layout nav a:hover{
+  border-color: var(--primary);
+}
+
+.help-layout nav a.active {
+  background: var(--primary);
+}
+
+/* faq */
+.faq .question {
+  background: rgba(0,0,0,0.2);
+  padding: 5px 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+.contact {
+  background: rgba(0,0,0,0.2);
+  display: inline-block;
+  padding: 20px 30px;
+  border-radius: 4px;
+  margin-left:38%
+}
+
+.contact p {
+  font-size: 14px;
+}
+
+.material-symbols-outlined {
+  vertical-align:middle;
+}
+
+/* allblogs list */
+.allblogs > a {
+  display: block;
+  background: rgba(0,0,0,0.2);
+  padding: 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+  text-decoration: none;
+}
+
+.allblogs > a:hover p:first-child {
+  color: var(--primary);
+  font-size: 16px;
+}
+
+.allblogs p {
+  margin: 0;
+}
+
+.allblogs > a p:not(:first-child) {
+ font-size: 14px;
+ color: #bbb;
+}
+
+.empty-blog {
+  margin-top: 30px;
+}
+
+/* allblogs details */
+.blog-details {
+  background: rgba(0,0,0,0.2);
+  padding: 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+/* form */
+.create-form form {
+  margin-top: 30px;
+}
+
+.edit-form form, .todo-form form {
+  margin-top: 10px;
+}
+
+.edit-form {
+  background: rgba(0,0,0,0.2);
+  display: inline-block;
+  padding: 20px 30px;
+  border-radius: 4px;
+  margin-left: 100px;
+  align-items: center;
+}
+
+.activee {
+  background-color: #bc4123
+}
+
+form input, form label span, form textarea {
+  display: block;
+  font-family: "Poppins";
+  font-size: 14px;
+}
+
+form input, form textarea {
+  margin-bottom: 15px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 0;
+  width: 350px;
+  color: var(--secondary);
+}
+
+form textarea {
+  height: 120px;
+}
+
+form label span {
+  margin-bottom: 10px;
+}
+
+/* to-do list */
+.todo-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 100px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: rgba(0,0,0,0.2);
+  width: 600px;
+  margin-top: 20px;
+}
+
+table thead {
+  background: var(--primary);
+  /* background: rgba(0,0,0,0.2); */
+}
+
+.todo-details {
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.todo-details td, th {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.todo-details span:last-child {
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 6px;
+}
+
+/* Signup-Login_Logout */
+
+.signup-login-forget-container {
+  background: rgba(0,0,0,0.2);
+  position: relative;
+  display: inline-block;
+  padding: 30px 0px;
+  border-radius: 4px;
+  margin-left: 4%;
+  width: 1100px; 
+  display: grid;
+	grid-template-columns: 4fr 1fr 4fr;
+}
+
+.login-forget, .signup-delete {
+  border-radius: 5px;
+	padding: 10px 20px 30px 30px;
+	float: left;
+  background: rgba(0,0,0,0.2);
+}
+
+.login-forget form input, .signup-delete form input {
+	padding: 12px;
+	border-radius: 4px;
+	margin: 2px 0;
+	font-size: 15px;
+	line-height: 20px;
+}
+
+.login-forget {
+	margin-left: 30px;
+}
+
+.signup-delete {
+	margin-left: 85px;
+}
+
+.vl {
+	position: absolute;
+	left: 50%;
+  top: 10%;
+	transform: translate(-50%);
+	border: 2px solid #ddd;
+	height: 500px;
+}
+  
+.vl-innertext {
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: var(--primary);
+	border: 2px solid #ccc;
+	border-radius: 50%;
+	padding: 10px 10px;
+}
+
+.login-form , .forget-password-form {
+  background: rgba(0,0,0,0.2);
+  border-radius: 5px;
+	padding: 10px 20px 30px 30px;
+  margin-top: 30px;
+  /* border-bottom: 3px dashed var(--primary); */
+}
+
+
+.forget-password-form h3 {
+  color:lightgreen
+}
+
+.signup-form , .delete-account-form {
+  background: rgba(0,0,0,0.2);
+  border-radius: 5px;
+	padding: 10px 20px 30px 30px;
+  margin-top: 30px;
+  /* border-bottom: 3px dashed var(--primary); */
+}
+
+.delete-account-form h3 {
+  color:lightgreen
+}
+
+.login-form button, .signup-form button, .forget-password-form button, .delete-account-form button {
+  margin-bottom: 15px;
+}
+
+.login-form h3, .signup-form h3, .forget-password-form h3, .delete-account-form h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.login-form input, .signup-form input, .forget-password-form input, .delete-account-form input {
+  margin-top: 3px;
+}
+
+div.error {
+  font-size: 14px;
+  color: crimson;
+  margin-bottom: 5px;
+}
+
+.errorinput {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid crimson;
+  color: crimson;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+.password-reset-done, .continue, .msg {
+  font-size: 14px;
+  margin-top: 15px;
+  color:lightgreen
+}
